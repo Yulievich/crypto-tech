@@ -1,1 +1,43 @@
+body {
+    background-color: #000;
+}
 
+.dot-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.dot-animation canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dot-animation canvas:nth-child(1) {
+    opacity: 0.2;
+    animation: animate 20s linear infinite;
+}
+
+.dot-animation canvas:nth-child(2) {
+    opacity: 0.5;
+    animation: animate 30s linear infinite;
+}
+
+.dot-animation canvas:nth-child(3) {
+    opacity: 0.8;
+    animation: animate 40s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(1000px);
+    }
+}
