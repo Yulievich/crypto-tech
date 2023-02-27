@@ -1,43 +1,57 @@
-body {
-    background-color: #000;
+.container{
+    color: antiquewhite;
+
 }
 
-.dot-animation {
-    position: absolute;
+/* основной контейнер хедера */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* отступы вокруг меню */
+    position: relative;
+    height: 5%;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    z-index: -1;
+    z-index: 9999;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.dot-animation canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+/* стили для меню */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.dot-animation canvas:nth-child(1) {
-    opacity: 0.2;
-    animation: animate 20s linear infinite;
+nav li {
+    margin: 0 10px; /* отступы между элементами меню */
 }
 
-.dot-animation canvas:nth-child(2) {
-    opacity: 0.5;
-    animation: animate 30s linear infinite;
+nav a {
+    display: block;
+    color: antiquewhite; /* цвет ссылок меню */
+    text-decoration: none;
+    text-transform: uppercase; /* преобразование текста в верхний регистр */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px; /* отступы внутри элементов меню */
+    transition: all 0.3s ease-in-out; /* плавное изменение свойств при наведении */
 }
 
-.dot-animation canvas:nth-child(3) {
-    opacity: 0.8;
-    animation: animate 40s linear infinite;
+nav a:hover {
+    color: #0B1235; /* цвет ссылок меню при наведении */
+    background-color: #09A5E8; /* цвет фона ссылок меню при наведении */
+    border-radius: 5px;
 }
 
-@keyframes animate {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(1000px);
+/* медиа-запрос для адаптивности */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* скрываем основное меню на мобильных устройствах */
     }
 }
