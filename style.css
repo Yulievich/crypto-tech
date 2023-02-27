@@ -34,13 +34,15 @@ nav li {
 
 nav a {
     display: block;
-    color: antiquewhite; /* цвет ссылок меню */
+    color: ghostwhite; /* цвет ссылок меню */
     text-decoration: none;
     text-transform: uppercase; /* преобразование текста в верхний регистр */
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
     padding: 10px; /* отступы внутри элементов меню */
     transition: all 0.3s ease-in-out; /* плавное изменение свойств при наведении */
+    background-color: rgba(51, 51, 51, 0.4);
+    border-radius: 5px;
 }
 
 nav a:hover {
