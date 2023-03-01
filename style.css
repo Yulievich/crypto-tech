@@ -1,6 +1,6 @@
 .container{
     color: antiquewhite;
-
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 /* основной контейнер хедера */
@@ -15,7 +15,7 @@ header {
     left: 0;
     right: 0;
     z-index: 9999;
-    font-family: 'Montserrat Alternates', sans-serif;
+    letter-spacing: 3px;
 }
 
 /* стили для меню */
@@ -58,10 +58,13 @@ nav a:hover {
     }
 }
 #home {
-    /*background-color: #1a1a1a;*/
+    background-color: rgba(72, 105, 214, 0.3);
     color: #fff;
     padding: 50px;
     text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 15px;
 }
 
 #home h1 {
@@ -72,7 +75,8 @@ nav a:hover {
 #home p {
     font-size: 24px;
     line-height: 1.5;
-    margin-bottom: 40px;
+    max-width: 70%;
+    margin: 0 auto;
 }
 #about {
     /* background-color: #f1f1f1; */
