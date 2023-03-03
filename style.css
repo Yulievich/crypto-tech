@@ -34,12 +34,23 @@ nav li {
 
 .li_img {
     position: relative;
-    left: -7%;
-
+    left: -6%;
+    font-family: 'Jost', sans-serif;
+    font-size: 50px;
+    overflow: hidden;
 }
+
 
 .logo_li {
     border-radius: 15px;
+    max-width: 15%;
+    max-height: 15%;
+}
+
+.li_img span {
+    position: relative;
+    top: 4.5vh;
+    left: 2vh;
 }
 
 nav a {
@@ -72,7 +83,7 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     position: relative;
-    height: 20%;
+    height: 23%;
     padding: 2% 2% 2% 0;
 }
 
@@ -84,6 +95,8 @@ nav a:hover {
 
 .homeSocial div {
     padding: 1%;
+    margin-top: 5%;
+    margin-left: 3%;
 }
 
 .bigBlock {
@@ -98,6 +111,49 @@ nav a:hover {
     overflow: hidden;
 }
 
+.homeButton {
+    margin: 2vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.circle {
+    margin: 1.5vh 0 0 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vh;
+    height: 2.5vw;
+    border-radius: 50%;
+    background-color: rgba(96, 196, 194, 1);
+    position: relative;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.play {
+    width: 0;
+    height: 0;
+    border-top: 1vh solid transparent;
+    border-bottom: 1vh solid transparent;
+    border-left: 2vh solid rgba(0, 0, 0, 0.7);
+    position: absolute;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(190, 190, 190, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(190, 190, 190, 0.0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(190, 190, 190, 0.0);
+    }
+}
+
+
 .rightBlockHome {
     width: 50%;
     padding: 2% 0.5% 2% 7%;
@@ -109,17 +165,16 @@ nav a:hover {
 
 #home {
     overflow: hidden;
-    background-color: rgba(72, 105, 214, 0.9);
     color: #fff;
     text-align: left;
     border-radius: 15px;
-    margin: 1%;
+    margin: 7% 0 4.5% 0;
+    height: 60vh;
 }
 
 #home h1 {
-    margin: 4% 4% 4% 4%;
+    margin: 4% 4% 30px 4%;
     font-size: 50px;
-    margin-bottom: 30px;
     font-family: 'Jost', sans-serif;
 }
 
@@ -128,21 +183,41 @@ nav a:hover {
     line-height: 1.5;
 }
 
+.firstButton {
+    margin: 1.5vh;
+    text-align: center;
+    padding-top: 0.4vh;
+    width: 10.25vw;
+    height: 5vh;
+    border: 3px solid rgba(96, 196, 194, 0.97);
+    border-radius: 0 20px 0 20px;
+}
+
 #about {
-    /* background-color: #f1f1f1; */
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(6, 9, 34, 1);
     padding-left: 50px;
     text-align: center;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.leftBlockAbout, .rightBlockAbout {
+    width: 50%;
+    padding: 10vh;
 }
 
 #about h2 {
-    color: #222;
-    font-size: 36px;
+    color: white;
+    font-size: 7vh;
     margin-bottom: 30px;
+    font-family: 'Jost', sans-serif;
 }
 
 #about p {
-    color: #555;
-    font-size: 24px;
+    color: white;
+    font-size: 3vh;
     line-height: 1.5;
     margin-bottom: 40px;
 }
