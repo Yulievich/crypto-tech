@@ -1,454 +1,208 @@
-.container {
-    color: antiquewhite;
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-/* основной контейнер хедера */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px; /* отступы вокруг меню */
-    position: relative;
-    height: 5%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    letter-spacing: 3px;
-}
-
-/* стили для меню */
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 10px; /* отступы между элементами меню */
-}
-
-.li_img {
-    position: relative;
-    left: -6%;
-    font-family: 'Jost', sans-serif;
-    font-size: 50px;
-    overflow: hidden;
-}
-
-
-.logo_li {
-    border-radius: 15px;
-    max-width: 15%;
-    max-height: 15%;
-}
-
-.li_img span {
-    position: relative;
-    top: 4.5vh;
-    left: 2vh;
-}
-
-nav a {
-    display: block;
-    color: ghostwhite; /* цвет ссылок меню */
-    text-decoration: none;
-    text-transform: uppercase; /* преобразование текста в верхний регистр */
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px; /* отступы внутри элементов меню */
-    transition: all 0.3s ease-in-out; /* плавное изменение свойств при наведении */
-    background-color: rgba(51, 51, 51, 0.4);
-    border-radius: 5px;
-}
-
-nav a:hover {
-    color: #0B1235; /* цвет ссылок меню при наведении */
-    background-color: #09A5E8; /* цвет фона ссылок меню при наведении */
-    border-radius: 5px;
-}
-
-/* медиа-запрос для адаптивности */
-@media (max-width: 768px) {
-    nav {
-        display: none; /* скрываем основное меню на мобильных устройствах */
-    }
-}
-
-.homeSocial {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    height: 23%;
-    padding: 2% 2% 2% 0;
-}
-
-.homeSocial img {
-    position: relative;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.homeSocial div {
-    padding: 1%;
-    margin-top: 5%;
-    margin-left: 3%;
-}
-
-.bigBlock {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.leftBlockHome {
-    padding-left: 5%;
-    width: 50%;
-    overflow: hidden;
-}
-
-.homeButton {
-    margin: 2vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.circle {
-    margin: 1.5vh 0 0 2vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5vh;
-    height: 2.5vw;
-    border-radius: 50%;
-    background-color: rgba(96, 196, 194, 1);
-    position: relative;
-    animation: pulse 2s infinite ease-in-out;
-}
-
-.play {
-    width: 0;
-    height: 0;
-    border-top: 1vh solid transparent;
-    border-bottom: 1vh solid transparent;
-    border-left: 2vh solid rgba(0, 0, 0, 0.7);
-    position: absolute;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(190, 190, 190, 0.7);
-    }
-
-    70% {
-        box-shadow: 0 0 0 10px rgba(190, 190, 190, 0.0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(190, 190, 190, 0.0);
-    }
-}
-
-
-.rightBlockHome {
-    width: 50%;
-    padding: 2% 0.5% 2% 7%;
-}
-
-.imgRight {
-    max-width: 70%;
-}
-
-#home {
-    overflow: hidden;
-    color: #fff;
-    text-align: left;
-    border-radius: 15px;
-    margin: 7% 0 4.5% 0;
-    height: 60vh;
-}
-
-#home h1 {
-    margin: 4% 4% 30px 4%;
-    font-size: 50px;
-    font-family: 'Jost', sans-serif;
-}
-
-#home p {
-    font-size: 24px;
-    line-height: 1.5;
-}
-
-.firstButton {
-    margin: 1.5vh;
-    text-align: center;
-    padding-top: 0.4vh;
-    width: 10.25vw;
-    height: 5vh;
-    border: 3px solid rgba(96, 196, 194, 0.97);
-    border-radius: 0 20px 0 20px;
-}
-
-#about {
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(6, 9, 34, 1);
-    padding-left: 50px;
-    text-align: center;
-    height: 70vh;
-    overflow: hidden;
-}
-
-.leftBlockAbout, .rightBlockAbout {
-    width: 50%;
-    padding: 10vh;
-}
-
-#about h2 {
-    color: white;
-    font-size: 7vh;
-    margin-bottom: 30px;
-    font-family: 'Jost', sans-serif;
-}
-
-#about p {
-    color: white;
-    font-size: 3vh;
-    line-height: 1.5;
-    margin-bottom: 40px;
-}
-
-#services {
-    /*background-color: #fff;*/
-    padding: 50px;
-    text-align: center;
-}
-
-.services_container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.services_container h2 {
-    font-size: 48px;
-    margin-bottom: 30px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.service-item {
-    /*background-color: #f1f1f1;*/
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.service-item h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.service-item p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-#news {
-    /*background-color: #f8f8f8;*/
-    padding: 60px 0;
-}
-
-.news_container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px 0;
-}
-
-.col-md-12 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.card {
-    border: none;
-    margin-bottom: 30px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.card-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.card-text {
-    margin-bottom: 15px;
-}
-
-.btn-primary {
-    /*background-color: #6c63ff;*/
-    border-color: #6c63ff;
-    color: #fff;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-    /*background-color: #514dc2;*/
-    border-color: #514dc2;
-    color: #fff;
-}
-
-.footer_container {
-    background-color: #222;
-    color: #fff;
-    padding: 50px 0;
-}
-
-.footer_container h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.footer_container ul li {
-    margin-bottom: 10px;
-}
-
-.footer_container ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer_container form {
-    margin-top: 20px;
-}
-
-.footer_container input[type="email"] {
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    border-bottom: 1px solid #fff;
-    padding: 5px;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.footer_container input[type="email"]:focus {
-    outline: none;
-    border-color: #fff;
-}
-
-.footer_container button[type="submit"] {
-    background-color: #fff;
-    color: #222;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.footer_container button[type="submit"]:hover {
-    background-color: #555;
-    color: #fff;
-}
-
-@media (max-width: 768px) {
-    .footer_container {
-        text-align: center;
-    }
-
-    .footer_container .row {
-        display: block;
-    }
-
-    .footer_container .col-md-4,
-    .footer_container .col-sm-6 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-top: 1px solid #ccc;
-    background-color: #f5f5f5;
-    color: #777;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-}
-
-.col-md-6 {
-    width: 50%;
-    text-align: center;
-}
-
-.col-md-6:last-child {
-    text-align: right;
-}
-
-ul.list-inline {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-ul.list-inline li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-ul.list-inline li a {
-    color: #777;
-    text-decoration: none;
-}
-
-ul.list-inline li a:hover {
-    color: #333;
-}
-
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
-
-    .col-md-6 {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .col-md-6:last-child {
-        text-align: center;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTO-TECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="null_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Montserrat+Alternates:wght@300&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container" id="animation">
+    <header>
+
+        <nav class="main-menu">
+            <ul>
+                <li class="li_img"><img class="logo_li" src="https://cdn-icons-png.flaticon.com/512/7172/7172267.png"
+                                        alt="logo"><span>CRYPTO-TECH</span></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#contacts">CONTACTS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="home">
+        <div class="bigBlock">
+            <div class="leftBlockHome">
+                <div class="homeSocial">
+                    <div class="facebook">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook_ico">
+                    </div>
+                    <div class="youtube">
+                        <img src="https://cdn-icons-png.flaticon.com/512/187/187210.png" alt="youtube">
+                    </div>
+                    <div class="instagram">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="instagram">
+                    </div>
+                    <div class="twitter">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670211.png" alt="twitter">
+                    </div>
+                </div>
+                <div class="homeText">
+                    <h1>Welcome to <br> CRYPTO-TECH!</h1>
+                    <p>We provide information about cryptocurrencies,</p>
+                    <br>
+                    <p>their technology and use in various fields. In addition,</p>
+                    <p>we help our clients to invest in cryptocurrencies</p>
+                    <p> and provide crypto asset management services.</p>
+                </div>
+                <div class="homeButton">
+                    <div class="firstButton">
+                        <p>READ NOW</p>
+                    </div>
+                    <div class="circle">
+                        <div class="play"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightBlockHome">
+                <img class="imgRight" src="https://cdn-icons-png.flaticon.com/512/848/848504.png" alt="svg_image">
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="leftBlockAbout">
+            <img src="https://cdn-icons-png.flaticon.com/512/8477/8477512.png" alt="efir">
+        </div>
+        <div class="rightBlockAbout">
+            <h2>What is a cryptocurrency?</h2>
+            <p>Cryptocurrency is a digital currency that uses cryptographic techniques to secure transactions and
+                control
+                the creation of new currency units. Blockchain is the technology on which most cryptocurrencies are
+                based.
+                It allows you to create secure, immutable and decentralized databases that are not subject to
+                interference
+                from third parties.</p>
+        </div>
+    </div>
+    <div id="services">
+        <div class="services_container">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Consultations</h3>
+                    <p>We provide advice on investing in cryptocurrencies and managing cryptoassets. Our experts are
+                        ready to help you make the right decision and get the maximum benefit.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Investment</h3>
+                    <p>We offer services for investing in cryptocurrencies. Our professionals will help you build and
+                        manage your investment portfolio for maximum profit.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Crypto asset management</h3>
+                    <p>We provide crypto asset management services. Our experts will help you manage your cryptocurrency
+                        portfolio and maximize profits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="news">
+        <div class="news_container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>News and articles</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="img/news1.jpg" alt="News 1">
+                        <div class="card-body">
+                            <h5 class="card-title">news 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut purus
+                                a mi tempus tristique. Praesent convallis faucibus dapibus. Sed sit amet libero nec enim
+                                faucibus rhoncus a ut quam. </p>
+                            <a href="#" class="btn btn-primary">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="img/news2.jpg" alt="News 2">
+                        <div class="card-body">
+                            <h5 class="card-title">news 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut purus
+                                a mi tempus tristique. Praesent convallis faucibus dapibus. Sed sit amet libero nec enim
+                                faucibus rhoncus a ut quam. </p>
+                            <a href="#" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="img/news3.jpg" alt="News 3">
+                        <div class="card-body">
+                            <h5 class="card-title">news 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut purus
+                                a mi tempus tristique. Praesent convallis faucibus dapibus. Sed sit amet libero nec enim
+                                faucibus rhoncus a ut quam. </p>
+                            <a href="#" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <h4>Contacts</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-map-marker"></i> Address: m. Kyiv, st. Banderi, d. 1, office 101</li>
+                        <li><i class="fa fa-phone"></i> Phone: +38 (093) 410-13-97</li>
+                        <li><i class="fa fa-envelope"></i> Email: info@cryptotech.ru</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h4>Ссылки</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h4>Subscribe to us</h4>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Введите ваш email">
+                        </div>
+                        <button type="submit" class="btn btn-default">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>&copy; 2023 CryptoTech. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="list-inline pull-right">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
